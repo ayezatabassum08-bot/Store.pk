@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NODE — Tech Accessories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo"><span class="dot"></span>NODE</div>
+    <div class="nav-links">
+      <a href="#mobile">Mobile</a>
+      <a href="#laptop">Laptop</a>
+      <a href="#audio">Audio</a>
+      <a href="#more">More</a>
+    </div>
+    <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+      CART <span class="cart-count mono" id="cartCount">0</span>
+    </button>
+  </div>
+</div>
+
+<div class="hero">
+  <div>
+    <div class="hero-eyebrow">Accessory catalog / rev. 2026</div>
+    <h1>SIGNAL<br><span class="outline">& CHARGE.</span></h1>
+  </div>
+  <div>
+    <p class="hero-sub">Cables, cases, sound, and power — sourced and tested for the gear you already own. No bundles you don't need.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="n">24</div>
+        <div class="l">Products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">4</div>
+        <div class="l">Categories</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">2–4d</div>
+        <div class="l">Ship time</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="rail" id="rail">
+  <div class="chip active" data-filter="all">All</div>
+  <div class="chip" data-filter="mobile">Mobile Accessories</div>
+  <div class="chip" data-filter="laptop">Laptop Accessories</div>
+  <div class="chip" data-filter="audio">Earbuds & Headphones</div>
+  <div class="chip" data-filter="more">More</div>
+</div>
+
+<div class="catalog" id="catalog"></div>
+
+<footer>
+  <div>© 2026 NODE — accessories, done properly.</div>
+  <div>Prices in USD</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="close-btn" id="drawerClose" aria-label="Close cart">×</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot" id="drawerFoot" style="display:none;">
+    <div class="total-row"><span>Subtotal</span><span class="mono" id="subtotal">$0.00</span></div>
+    <div class="total-row"><span>Shipping</span><span class="mono" id="shipping">$0.00</span></div>
+    <div class="total-row grand"><span>Total</span><span class="price" id="grandTotal">$0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Checkout</h3>
+      <button class="close-btn" id="modalClose">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
